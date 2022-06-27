@@ -1,0 +1,22 @@
+name: "Open Github Issues"
+author: malaynayak
+description: An action to open GH issue on failure
+inputs:
+  token:
+    description: "Giuthub Token"
+    required: true
+  title:
+    description: "Issue Title"
+    required: true
+  body:
+    description: "Issue Body"
+    required: false
+  assignees:
+    description: "Issue Assignee"
+    required: false
+outputs:
+  issue:
+    description: "The issue object as a JSON string"
+runs:
+  using: "node16"
+  main: "dist/index.js"
