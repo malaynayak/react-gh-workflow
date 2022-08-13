@@ -12,7 +12,7 @@ try {
     ...github.context.repo,
     title,
     body,
-    assignees,
+    assignee,
   });
   core.setOutput("issue", JSON.stringify(response.data));
 } catch (error) {
